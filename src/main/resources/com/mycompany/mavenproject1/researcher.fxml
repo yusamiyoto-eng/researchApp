@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" spacing="20.0" 
+      fx:controller="com.mycompany.mavenproject1.ResearcherController"
+      style="-fx-background-color: white; -fx-padding: 30;"
+      alignment="CENTER">
+   
+   <padding>
+      <Insets top="30" right="30" bottom="30" left="30"/>
+   </padding>
+   
+   <children>
+      <StackPane>
+         <Label text="Режим исследования" 
+                style="-fx-text-fill: black; -fx-font-size: 34; -fx-font-weight: bold;"/>
+      </StackPane>
+      
+      <VBox style="-fx-background-color: #f8f8f8; -fx-border-color: #ddd; -fx-border-width: 1; -fx-border-radius: 5;"
+            spacing="20">
+         <padding>
+            <Insets top="25" right="25" bottom="25" left="25"/>
+         </padding>
+         
+         <children>
+            <Label text="Укажите характеристики объекта исследования" 
+                   style="-fx-text-fill: black; -fx-font-size: 20; -fx-font-weight: bold; -fx-padding: 0 0 15 0;"/>
+            
+            <VBox spacing="5">
+               <Label text="Название материала:" 
+                      style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+               <TextField fx:id="materialTextField"
+                         style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                         promptText="Введите название материала"/>
+            </VBox>
+            
+            <HBox spacing="30" alignment="CENTER_LEFT">
+               <VBox spacing="15">
+                  <VBox spacing="5">
+                     <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="τ min:" 
+                               style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                        <Label text="(мин)" 
+                               style="-fx-text-fill: #666; -fx-font-size: 20; -fx-font-style: italic;"/>
+                     </HBox>
+                     <TextField fx:id="tauMinTextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="τ max:" 
+                               style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                        <Label text="(мин)" 
+                               style="-fx-text-fill: #666; -fx-font-size: 20; -fx-font-style: italic;"/>
+                     </HBox>
+                     <TextField fx:id="tauMaxTextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="Δτ:" 
+                               style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                        <Label text="(мин)" 
+                               style="-fx-text-fill: #666; -fx-font-size: 20; -fx-font-style: italic;"/>
+                     </HBox>
+                     <TextField fx:id="deltaTauTextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+               </VBox>
+               
+               <VBox spacing="15">
+                  <VBox spacing="5">
+                     <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="T min:" 
+                               style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                        <Label text="(°C)" 
+                               style="-fx-text-fill: #666; -fx-font-size: 20; -fx-font-style: italic;"/>
+                     </HBox>
+                     <TextField fx:id="TminTextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="T max:" 
+                               style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                        <Label text="(°C)" 
+                               style="-fx-text-fill: #666; -fx-font-size: 20; -fx-font-style: italic;"/>
+                     </HBox>
+                     <TextField fx:id="TmaxTextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="ΔT:" 
+                               style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                        <Label text="(°C)" 
+                               style="-fx-text-fill: #666; -fx-font-size: 20; -fx-font-style: italic;"/>
+                     </HBox>
+                     <TextField fx:id="deltaTTextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+               </VBox>
+            </HBox>
+            
+            <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="exitButton" 
+                   text="Выйти" 
+                   onAction="#exit"
+                   style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 12; -fx-cursor: hand;"
+                   maxWidth="Infinity"/>
+            
+            <Button fx:id="calculateButton" 
+                   text="Выполнить расчёт Hr" 
+                   onAction="#calculate"
+                   style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 12; -fx-cursor: hand;"
+                   maxWidth="Infinity"/>
+            </HBox>
+            
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" spacing="20.0" 
+      fx:controller="com.mycompany.mavenproject1.CreateController"
+      style="-fx-background-color: white; -fx-padding: 30;"
+      alignment="CENTER">
+   
+   <padding>
+      <Insets top="30" right="30" bottom="30" left="30"/>
+   </padding>
+   
+   <children>
+      <StackPane>
+         <Label text="Добавление новой записи" 
+                style="-fx-text-fill: black; -fx-font-size: 34; -fx-font-weight: bold;"/>
+      </StackPane>
+      
+      <VBox style="-fx-background-color: #f8f8f8; -fx-border-color: #ddd; -fx-border-width: 1; -fx-border-radius: 5;"
+            spacing="15">
+         <padding>
+            <Insets top="25" right="25" bottom="25" left="25"/>
+         </padding>
+         
+         <children>
+            
+            <VBox spacing="5">
+               <Label text="Название материала:" 
+                      style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+               <TextField fx:id="materialTextField" 
+                         style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                         promptText="Введите название материала"/>
+               <Label text="Коэффициенты математической модели:" 
+                      style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 10-0-0-0"/>
+            </VBox>
+            
+            <HBox spacing="20" alignment="CENTER_LEFT">
+               <VBox spacing="15">
+                  <VBox spacing="5">
+                     <Label text="b0:" 
+                            style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                     <TextField fx:id="b0TextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <Label text="b1:" 
+                            style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                     <TextField fx:id="b1TextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <Label text="b2:" 
+                            style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                     <TextField fx:id="b2TextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <Label text="b3:" 
+                            style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                     <TextField fx:id="b3TextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <Label text="b4:" 
+                            style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                     <TextField fx:id="b4TextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+               </VBox>
+               
+               <VBox spacing="15">
+                  <VBox spacing="5">
+                     <Label text="b5:" 
+                            style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                     <TextField fx:id="b5TextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <Label text="b6:" 
+                            style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                     <TextField fx:id="b6TextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <Label text="b7:" 
+                            style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                     <TextField fx:id="b7TextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+                  
+                  <VBox spacing="5">
+                     <Label text="b8:" 
+                            style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+                     <TextField fx:id="b8TextField" 
+                               style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                               promptText="0.0"/>
+                  </VBox>
+               </VBox>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER">
+               <Button fx:id="exitButton" 
+                      text="Отмена" 
+                      onAction="#exit"
+                      style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 12;"
+                      prefWidth="180"/>
+               <Button fx:id="finishUpdateButton" 
+                      text="Добавить запись" 
+                      onAction="#finishCreate"
+                      style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 12; -fx-cursor: hand;"
+                      prefWidth="280"/>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

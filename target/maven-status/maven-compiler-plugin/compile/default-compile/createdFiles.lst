@@ -1,0 +1,15 @@
+com\mycompany\mavenproject1\App.class
+com\mycompany\mavenproject1\AdminController.class
+com\mycompany\mavenproject1\Calculation.class
+com\mycompany\mavenproject1\CreateController.class
+com\mycompany\mavenproject1\ShowAlert.class
+com\mycompany\mavenproject1\Coefficients.class
+com\mycompany\mavenproject1\DBManager.class
+com\mycompany\mavenproject1\ResearchData.class
+com\mycompany\mavenproject1\UpdateController.class
+com\mycompany\mavenproject1\AuthDataController.class
+module-info.class
+com\mycompany\mavenproject1\AuthorizationController.class
+com\mycompany\mavenproject1\ResearcherController.class
+com\mycompany\mavenproject1\AuthDataController$1.class
+com\mycompany\mavenproject1\ViewsController.class

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" spacing="20.0" 
+      fx:controller="com.mycompany.mavenproject1.AuthDataController"
+      style="-fx-background-color: white; -fx-padding: 30;"
+      alignment="CENTER">
+   
+   <padding>
+      <Insets top="30" right="30" bottom="30" left="30"/>
+   </padding>
+   
+   <children>
+      <StackPane>
+         <Label text="Изменение данных авторизации" 
+                style="-fx-text-fill: black; -fx-font-size: 34; -fx-font-weight: bold;"/>
+      </StackPane>
+      
+      <VBox style="-fx-background-color: #f8f8f8; -fx-border-color: #ddd; -fx-border-width: 1; -fx-border-radius: 5;"
+            spacing="20">
+         <padding>
+            <Insets top="25" right="25" bottom="25" left="25"/>
+         </padding>
+         
+         <children>
+            <VBox spacing="5">
+               <Label text="Пользователь:" 
+                      style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+               <ComboBox fx:id="userBox" 
+                        promptText="Выберите пользователя..."
+                        style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"/>
+            </VBox>
+            
+            <VBox spacing="5">
+               <Label text="Новый логин:" 
+                      style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+               <TextField fx:id="changeLoginTextField"
+                         style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                         promptText="Введите новый логин"/>
+            </VBox>
+
+            <VBox spacing="5">
+               <Label text="Новый пароль:" 
+                      style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+               <TextField fx:id="changePasswordTextField"
+                         style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 8; -fx-font-size: 20; -fx-background-color: white;"
+                         promptText="Введите новый пароль"
+                         />
+            </VBox>
+            
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="exitButton" 
+                    text="Назад" 
+                    onAction="#exit"
+                    style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 12;"
+                    prefWidth="200"/>
+                <Button fx:id="saveAuthDataButton" 
+                    text="Сохранить изменения" 
+                    onAction="#saveAuthData"
+                    style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 12; -fx-cursor: hand;"
+                    prefWidth="280"/>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

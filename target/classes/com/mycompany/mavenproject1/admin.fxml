@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.ScrollPane?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" 
+      fx:controller="com.mycompany.mavenproject1.AdminController"
+      style="-fx-background-color: white; -fx-padding: 20;">
+   
+   <padding>
+      <Insets top="20" right="20" bottom="20" left="20"/>
+   </padding>
+   
+   <children>
+      <StackPane>
+         <Label text="Таблица материалов и коэффициентов" 
+                style="-fx-text-fill: black; -fx-font-size: 34; -fx-font-weight: bold;"/>
+      </StackPane>
+      
+      <ScrollPane style="-fx-background-color: #f8f8f8; -fx-border-color: #ddd; -fx-border-width: 1; -fx-border-radius: 5;"
+                  fitToWidth="true"
+                  VBox.vgrow="ALWAYS">
+         <TableView fx:id="coeffTableView" style="-fx-background-color: white;">
+            <columns>
+               <TableColumn fx:id="idColumn" text="ID" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="50" prefWidth="60"/>
+               <TableColumn fx:id="materialColumn" text="Название материала" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="150" prefWidth="250"/>
+               <TableColumn fx:id="b0Column" text="b0" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="50" prefWidth="70"/>
+               <TableColumn fx:id="b1Column" text="b1" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="50" prefWidth="70"/>
+               <TableColumn fx:id="b2Column" text="b2" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="50" prefWidth="70"/>
+               <TableColumn fx:id="b3Column" text="b3" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="50" prefWidth="70"/>
+               <TableColumn fx:id="b4Column" text="b4" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="50" prefWidth="70"/>
+               <TableColumn fx:id="b5Column" text="b5" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="50" prefWidth="70"/>
+               <TableColumn fx:id="b6Column" text="b6" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="50" prefWidth="70"/>
+               <TableColumn fx:id="b7Column" text="b7" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="50" prefWidth="70"/>
+               <TableColumn fx:id="b8Column" text="b8" 
+                          style="-fx-font-size: 20; -fx-font-weight: bold;"
+                          minWidth="50" prefWidth="70"/>
+            </columns>
+         </TableView>
+      </ScrollPane>
+      
+      <VBox style="-fx-background-color: #f8f8f8; -fx-border-color: #ddd; -fx-border-width: 1; -fx-border-radius: 5;"
+            spacing="15">
+         <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+         </padding>
+         
+         <Label text="Управление записями" 
+                style="-fx-text-fill: black; -fx-font-size: 20; -fx-font-weight: bold; -fx-padding: 0 0 5 0;"/>
+         
+         <HBox alignment="CENTER" spacing="50">
+             <Button fx:id="deleteButton" text="Удалить запись" onAction="#deleteRow" 
+                   style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 10 20;"/>
+            <Button fx:id="addButton" text="Добавить запись" onAction="#createRow" 
+                   style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 10 20;"/>
+            
+         </HBox>
+      </VBox>
+      
+      <VBox style="-fx-background-color: #f8f8f8; -fx-border-color: #ddd; -fx-border-width: 1; -fx-border-radius: 5;"
+            spacing="15">
+         <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+         </padding>
+         
+         <HBox alignment="CENTER" spacing="50">
+             <Button fx:id="exitButton" text="Выйти" onAction="#exit" 
+                   style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 10 20;"/>
+            <Button fx:id="authDataButton" text="Обновить данные авторизации" onAction="#changeAuthData" 
+                   style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 10 20;"/>
+            
+         </HBox>
+      </VBox>
+   </children>
+</VBox>

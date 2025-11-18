@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" spacing="20" 
+      style="-fx-background-color: white; -fx-padding: 40;"
+      xmlns="http://javafx.com/javafx/8.0.171" 
+      fx:controller="com.mycompany.mavenproject1.AuthorizationController">
+   
+   <padding>
+      <Insets top="40" right="40" bottom="40" left="40"/>
+   </padding>
+   
+   <children>
+      <StackPane>
+         <Label text="Авторизация" 
+                style="-fx-text-fill: black; -fx-font-size: 34; -fx-font-weight: bold;"/>
+      </StackPane>
+      
+      <VBox style="-fx-background-color: #f8f8f8; -fx-border-color: #ddd; -fx-border-width: 1; -fx-border-radius: 5;"
+            spacing="20">
+         <padding>
+            <Insets top="30" right="30" bottom="30" left="30"/>
+         </padding>
+         
+         <children>
+            <VBox spacing="5">
+               <Label text="Логин" 
+                      style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+               <TextField fx:id="loginTextField" 
+                         style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 10; -fx-font-size: 14; -fx-background-color: white;"
+                         promptText="Введите ваш логин"/>
+            </VBox>
+            
+            <VBox spacing="5">
+               <Label text="Пароль" 
+                      style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 20;"/>
+               <PasswordField fx:id="passwordTextField" 
+                             style="-fx-background-radius: 3; -fx-border-radius: 3; -fx-border-color: #ccc; -fx-padding: 10; -fx-font-size: 14; -fx-background-color: white;"
+                             promptText="Введите ваш пароль"/>
+            </VBox>
+            
+            <HBox spacing="10" alignment="CENTER">
+               <Button fx:id="exitButton" 
+                      text="Выйти" 
+                      onAction="#exit"
+                      style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 12;"
+                      prefWidth="120"/>
+               <Button fx:id="authButton" 
+                      text="Войти" 
+                      onAction="#authorization"
+                      style="-fx-background-color: #2c2c2c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20; -fx-background-radius: 3; -fx-padding: 12;"
+                      prefWidth="120"/>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
