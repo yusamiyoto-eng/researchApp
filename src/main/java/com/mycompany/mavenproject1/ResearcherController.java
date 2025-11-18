@@ -1,8 +1,13 @@
 package com.mycompany.mavenproject1;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 public class ResearcherController {
@@ -19,7 +24,24 @@ public class ResearcherController {
     @FXML
     private TextField deltaTTextField;
     @FXML
-    private TextField materialTextField;
+    private ComboBox<String> materialComboBox;
+    
+    @FXML
+    void initialize() throws SQLException{
+        List<Coefficients> coeffList = DBManager.selectAll();
+        List<String> materials = new ArrayList();
+        for (int i=0; i < coeffList.size(); i++) {
+            materials.add(coeffList.get(i).getMaterial());
+        }
+        materialComboBox.setItems(FXCollections.observableArrayList(materials));
+        
+        tauMinTextField.setText("50");
+        tauMaxTextField.setText("70");
+        deltaTauTextField.setText("1");
+        TminTextField.setText("1200");
+        TmaxTextField.setText("1400");
+        deltaTTextField.setText("10");
+    }
 
     @FXML
     public void calculate() throws IOException {
@@ -55,10 +77,10 @@ public class ResearcherController {
                 return;
             }
 
-            material = materialTextField.getText();
+            material = materialComboBox.getValue();
             
-            if (materialTextField.getText().equals("")){
-            ShowAlert.showAlert(Alert.AlertType.ERROR, "Некорректный ввод данных!", "Введите название материала!");
+            if (materialComboBox.getSelectionModel().getSelectedIndex() == -1){
+            ShowAlert.showAlert(Alert.AlertType.ERROR, "Некорректный ввод данных!", "Выберите материал!");
             return;
             }
             
